@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+      <link rel="stylesheet" href = "styles.css">
+      <title>Services</title>
+    </head>
+
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="Logo"> <!-- Replace 'logo.png' with your logo file -->
+            <h1>BAYIRA RURAL WOMEN’S<br> DEVELOPMENT ASSOCIATION(BARWODA)</h1>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="events.html">Events</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="donate.html" class="cta-button">DONATE</a>
+        </nav>
+    </header>
+    <div class="activity">
+        <img src="logo.jpeg" alt="Activity 1">
+        <div class="activity-details">
+            <h3>About Us</h3>
+            <p>Bayira Rural Women's Development Association (BARWODA) is a community based Women organization that is located in Kisinga Sub-county, Bukonzo, Kasese district, western Uganda. The group was founded in the year1998 by 5 women for the promotion of community development in the area. It was seen that women are economically poor and suffer all sorts of exploitation.</p>
+            <p>The group has a current membership of 45 women and 2 men ranging from 22-42 years.
+                The group started with an aim of promoting women's rights and participation on the community development.
+                
+            </p>
+            <p>
+                Bayira Rural Women's Development Association - BARWODA is a local grass root community Based Organization CBO engaged in programmes or activities intended to empower women to realize social economic and cultural development. It is dully registered with the Kasese District Local Government-Community Development Department.
+            </p>
+        
+        </div>
+    </div>
+    <section class="stats-section">
+        <div class="stats-container">
+          <!-- Stat Item 1 -->
+          <div class="stat-item">
+            <h3 class="counter" data-target="200">0</h3>
+            <p>Women Empowered</p>
+          </div>
+    
+          <!-- Stat Item 2 -->
+          <div class="stat-item">
+            <h3 class="counter" data-target="50">0</h3>
+            <p>Volunteers</p>
+          </div>
+    
+          <!-- Stat Item 3 -->
+          <div class="stat-item">
+            <h3 class="counter" data-target="6">0</h3>
+            <p>Projects completed</p>
+          </div>
+        </div>
+    </section>
+    
+    <section class="director-section">
+        <!-- Title -->
+        <div class="director-title">
+          <h2>Meet Our Director</h2>
+        </div>
+    
+        <!-- Director Info -->
+        <div class="director-info">
+          <!-- Director Image -->
+          <img src="MITSE ROBERT.jpg" alt="Director Name">
+    
+          <!-- Director Name and Title -->
+          <div class="director-name">Mitse Robert</div>
+          <div class="director-title-name">Founder & Executive Director</div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Section 1: About -->
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <p>BARWODA is a community based Women organization that is located in Kisinga Sub-county, Bukonzo, Kasese district, western Uganda. </p>
+            </div>
+
+            <!-- Section 2: Links -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="events.html">Events</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 3: Social Media -->
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Section 4: Newsletter -->
+            <div class="footer-column">
+                <h4>Send Message</h4>
+                <form action="#" method="POST">
+                  <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+                  <a href="mailto:barwoda2005@gmail.com?subject=Donation Message&body=" + encodeURIComponent(document.getElementById('message').value)"><button type="submit">Submit</button></a>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bayira Rural Women's Development Association (BARWODA). All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Toggle the navigation menu on small screens
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+    </script>
+   <script>
+    // Intersection Observer to trigger counter animation when the section is in view
+    const counters = document.querySelectorAll('.counter');
+
+    const updateCounter = (counter) => {
+      const target = +counter.getAttribute('data-target');
+      let count = 0;
+      const interval = setInterval(() => {
+        count++;
+        counter.textContent = count;
+        if (count === target) {
+          clearInterval(interval);
+        }
+      }, 1);
+    };
+
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5 // Trigger when 50% of the section is in view
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          updateCounter(counter);
+          observer.unobserve(counter); // Stop observing once the counter is triggered
+        }
+      });
+    }, options);
+
+    counters.forEach(counter => {
+      observer.observe(counter); // Start observing all counters
+    });
+  </script>
+</body>

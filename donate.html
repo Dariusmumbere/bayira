@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href = "styles.css">
+        <title>Services</title>
+    </head>
+
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="Logo"> <!-- Replace 'logo.png' with your logo file -->
+            <h1>BAYIRA RURAL WOMEN’S<br> DEVELOPMENT ASSOCIATION(BARWODA)</h1>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="events.html">Events</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="donate.html" class="cta-button">DONATE</a>
+        </nav>
+    </header>
+    <div class="donate-container">
+        <div class="donate-header">
+            <h2 class="h">Support Our Cause</h2>
+            <p>Your generous donation will help us create a positive impact. Choose a payment method to donate today!</p>
+        </div>
+
+        <div class="payment-methods">
+            <!-- Mobile Money Section -->
+            <div class="payment-method">
+                <img src="mtnn.png" alt="Mobile Money">
+                <h3>Mobile Money</h3>
+                <p>Donate using your mobile money service (e.g., MTN, Airtel, etc.).</p>
+                <p class="number">Mobile Money Number: +256 700 123 456</p>
+            
+            </div>
+
+<div class="payment-method">
+                <img src="airtel.png" alt="Mobile Money">
+                <h3>Mobile Money</h3>
+                <p>Donate using your mobile money service (e.g., MTN, Airtel, etc.).</p>
+                <p class="number">Mobile Money Number: +256 700 123 456</p>
+            
+            </div>
+            <!-- Bank Account Section -->
+            <div class="payment-method">
+                <img src="centenary.png" alt="Bank Account">
+                <h3></h3>
+                <p>Donate directly to our bank account for a secure transaction.</p>
+                <p class="number">Bank Account Number: 123456789</p>
+                
+            </div>
+            <div class="payment-method">
+                <img src="stanbic.jpg" alt="Bank Account">
+                <h3>Stanbic Bank Uganda Limited</h3>
+                <p>Donate directly to our bank account for a secure transaction.</p>
+                <p class="number">Bank Account Number: 9030007386973<br>SWIFT CODE:SBICUGKX</p>
+                
+            </div>
+        </div>
+    </div>
+    <section class="parallax-section" style="background-image: url('please.jpg');">
+        <h1>Thank You for Your Support!</h1>
+        
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Section 1: About -->
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <p>BARWODA is a community based Women organization that is located in Kisinga Sub-county, Bukonzo, Kasese district, western Uganda. </p>
+            </div>
+
+            <!-- Section 2: Links -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 3: Social Media -->
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Section 4: Newsletter -->
+            <div class="footer-column">
+                <h4>Send Message</h4>
+                <form action="#" method="POST">
+                    <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+                    <a href="mailto:barwoda2005@gmail.com?subject=Donation Message&body=" + encodeURIComponent(document.getElementById('message').value)"><button type="submit">Submit</button></a>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bayira Rural Women's Development Association (BARWODA). All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Toggle the navigation menu on small screens
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+</body>

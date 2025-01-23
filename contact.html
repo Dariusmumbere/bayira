@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href = "styles.css">
+        <title>Services</title>
+    </head>
+
+
+<body>
+
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="Logo"> <!-- Replace 'logo.png' with your logo file -->
+            <h1>BAYIRA RURAL WOMEN’S<br> DEVELOPMENT ASSOCIATION(BARWODA)</h1>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="events.html">Events</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="donate.html" class="cta-button">DONATE</a>
+        </nav>
+    </header>
+    <h2 class="con">Contact Us</h2>
+    <section class="contact-sectionn">
+        <div class="contact-containerr">
+      
+          <!-- Contact Details -->
+          <div class="contact-boxx">
+            <i class="fas fa-phone"></i>
+            <h3>Phone Number</h3>
+            <p> +256-782-368040<br> +256-706-368040</p>
+          </div>
+      
+          <div class="contact-boxx">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p> barwoda2005@gmail.com</p>
+          </div>
+      
+          <div class="contact-boxx">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Location</h3>
+            <p>Kasese District <br>Uganda</p>
+          </div>
+      
+          <div class="contact-boxx">
+            <i class="fas fa-clock"></i>
+            <h3>Working Hours</h3>
+            <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+          </div>
+      
+          <!-- Contact Form -->
+          <div class="contact-formm">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="POST">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+  <section class="parallax-section" style="background-image: url('barwoda.jpg');">
+    <h1>Your Voice Matters—Join Us in Empowering Women Everywhere!</h1>
+    
+  </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Section 1: About -->
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <p>BARWODA is a community based Women organization that is located in Kisinga Sub-county, Bukonzo, Kasese district, western Uganda. </p>
+            </div>
+
+            <!-- Section 2: Links -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 3: Social Media -->
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Section 4: Newsletter -->
+            <div class="footer-column">
+                <h4>Send Message</h4>
+                <form action="#" method="POST">
+                    <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+                    <a href="mailto:barwoda2005@gmail.com?subject=Donation Message&body=" + encodeURIComponent(document.getElementById('message').value)"><button type="submit">Submit</button></a>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bayira Rural Women's Development Association (BARWODA). All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Toggle the navigation menu on small screens
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+</body>
