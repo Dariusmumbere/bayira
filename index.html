@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href = "styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <meta charset="UTF-8">
@@ -248,6 +249,18 @@
             nav.classList.toggle('active');
         }
     </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    ScrollReveal().reveal('.about-section, .aims-objectives, .activiies, .contact-form', {
+      distance: '50px',
+      duration: 800,
+      easing: 'ease-in-out',
+      origin: 'bottom',
+      interval: 200
+    });
+  });
+</script>
+
 
 </body>
 </html>
