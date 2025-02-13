@@ -109,7 +109,18 @@ to foster community development in the area.</p>
           </ul>
         </div>
       </section>
-       
+      <div class="corecontainer">
+        <h2>Our Core Values</h2>
+        <div class="scrolling-wrapper" id="scroll-container">
+            <p class="value-card">Authenticity</p>
+            <p class="value-card">Compassion</p>
+            <p class="value-card">Integrity</p>
+            <p class="value-card">Community</p>
+            <p class="value-card">Trustworthness</p>
+            <p class="value-card">Respect</p>
+            <p class="value-card">Love</p>
+        </div>
+    </div> 
       <h2 class = "activee">Activities of BARWODA</h2>
       <section class="activities">
         <div class="activity">
@@ -269,6 +280,16 @@ to foster community development in the area.</p>
     });
   });
 </script>
+<script>
+        const scrollContainer = document.getElementById("scroll-container");
+        function scrollContent() {
+            scrollContainer.scrollLeft += 1;
+            if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+                scrollContainer.scrollLeft = 0;
+            }
+        }
+        setInterval(scrollContent, 30);
+    </script>    
 
 
 </body>
